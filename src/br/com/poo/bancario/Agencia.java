@@ -38,10 +38,11 @@ public class Agencia {
 
     public Conta abrirConta(double saldo, Cliente cliente ){
         Conta contaAberta = new Conta(saldo, String.valueOf(numeroProximaConta), cliente );
+        this.adicionaContaLista(contaAberta);
         return null;
     }
     private void adicionaContaLista(Conta conta) {
-
+        this.contas.add(conta);
     }
 
 }
